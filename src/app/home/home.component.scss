@@ -1,0 +1,21 @@
+.carrusel {
+    display: flex;
+    justify-content: center;
+}
+
+.bloque {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.telefono {
+    width: 200px;
+    height: 200px;
+}
+
+.texto {
+    margin: 1px;
+    text-align: center;
+}
