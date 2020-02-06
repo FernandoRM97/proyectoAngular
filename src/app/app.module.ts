@@ -14,6 +14,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { environment } from '../environments/environment';
     CategoriesComponent,
     FooterComponent,
     CartComponent,
-    CarouselComponent
+    CarouselComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,9 @@ import { environment } from '../environments/environment';
     NgbModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireDatabaseModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
