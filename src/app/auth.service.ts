@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { map } from 'rxjs/operators';
-import { auth } from 'firebase';
 import { Router } from '@angular/router';
 import { FireDbService } from './fire-db.service';
 
@@ -10,6 +9,7 @@ import { FireDbService } from './fire-db.service';
 })
 export class AuthService {
 
+  logeado: boolean;
   email = '';
   pass = '';
   authUser = null;
@@ -38,6 +38,7 @@ export class AuthService {
       this.pass = '';
       this.authUser = user.user;
       this.db.updateUserData(user.user);
+      this.logeado = true;
     });
   }
 
@@ -47,6 +48,10 @@ export class AuthService {
     this.email = '';
     this.pass = '';
     this.router.navigate(['/']);
+    this.logeado = false;
   }
 
+  estado() {
+    return this.logeado;
+  }
 }

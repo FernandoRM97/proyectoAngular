@@ -17,6 +17,7 @@ import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { UsersComponent } from './users/users.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { UsersComponent } from './users/users.component';
     FooterComponent,
     CartComponent,
     CarouselComponent,
-    UsersComponent
+    UsersComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
