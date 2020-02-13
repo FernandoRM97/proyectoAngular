@@ -1,0 +1,52 @@
+<br/>
+<hr/>
+<br/>
+<div class="form-container">
+    <h1>Contacto</h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSaveForm()">
+        <input type="text" formControlName="name" id="name" placeholder="Tu nombre" minlength="5">
+        <div class="alert-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+            <div class="container-error-message" *ngIf="name.errors.required">
+                El campo Nombre es obligatorio.
+            </div>
+            <div class="container-error-message" *ngIf="name.errors.minlength">
+                El campo Nombre debe tener al menos {{name.errors.minlength.requiredLength}} caracteres.
+            </div>
+        </div>
+
+        <input type="email" formControlName="email" placeholder="Tu email">
+        <div class="alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+            <div class="container-error-message" *ngIf="email.errors.required">
+                El campo Email es obligatorio.
+            </div>
+            <div class="container-error-message" *ngIf="email.errors.minlength">
+                El campo Email debe tener al menos {{email.errors.minlength.requiredLength}} caracteres.
+            </div>
+            <div class="container-error-message" *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.pattern">
+                Debe ser un email válido.
+            </div>
+        </div>
+
+        <textarea formControlName="message" placeholder="Escribe tu mensaje aqui"></textarea>
+        <div class="alert-danger" *ngIf="message.invalid && (message.dirty || message.touched)">
+            <div class="container-error-message" *ngIf="message.errors.required">
+                El campo Mensaje es obligatorio.
+            </div>
+            <div class="container-error-message" *ngIf="message.errors.minlength">
+                El campo Mensaje debe tener al menos {{message.errors.minlength.requiredLength}} caracteres.
+            </div>
+        </div>
+
+        <button type="submit" class="btn-send">Enviar</button>
+    </form>
+</div>
+<br/>
+<hr/>
+<br/>
+<div style="text-align: center;">
+    <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.4422424148192!2d-5.874638684527277!3d37.544643233138935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd125ce603bed70f%3A0xcd0e9d8b39d715f0!2sInstituto%20de%20Educaci%C3%B3n%20Secundaria%20Jacarand%C3%A1!5e0!3m2!1ses!2ses!4v1581593618459!5m2!1ses!2ses"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>
+<br/>
+<hr/>
+<br/>

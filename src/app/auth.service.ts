@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { FireDbService } from './fire-db.service';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,13 @@ export class AuthService {
       this.pass = '';
       this.authUser = user.user;
       this.db.updateUserData(user.user);
+    })
+    .catch( e => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Usuario no registrado!',
+      });
     });
   }
 
@@ -50,7 +58,11 @@ export class AuthService {
       this.db.updateUserData(user.user);
       })
       .catch( e => {
-        alert('Usuario ya registrado');
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Usuario ya registrado!',
+        });
       });
   }
 
@@ -63,7 +75,4 @@ export class AuthService {
     this.logeado = false;
   }
 
-  estado() {
-    return this.logeado;
-  }
 }

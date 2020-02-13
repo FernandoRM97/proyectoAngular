@@ -1,0 +1,67 @@
+.form-container {
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 1000px;
+    padding: 16px;
+    margin: 10px auto;
+    background: #f7f7f7;
+}
+
+.form-container h1 {
+    background: #26272b;
+    padding: 20px 0;
+    font-size: 170%;
+    font-weight: 200;
+    text-align: center;
+    color: #fff;
+    margin: -16px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    transition: all 0, 30% ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+
+.form-container .btn-send {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background-color: #555;
+    border-bottom: 2px solid black;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+.form-container .btn-send:hover {
+    background-color: #9999;
+}
+
+.alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.container-error-message {
+    margin: 2px;
+}
+
+@media (max-width:750px) {
+    .mapa {
+        width: 350px;
+        height: auto;
+        padding: 5px;
+    }
+}
