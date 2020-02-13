@@ -38,8 +38,20 @@ export class AuthService {
       this.pass = '';
       this.authUser = user.user;
       this.db.updateUserData(user.user);
-      this.logeado = true;
     });
+  }
+
+  emailSignUp() {
+    return this.auth.auth.createUserWithEmailAndPassword(this.email, this.pass)
+      .then(user => {
+      this.email = '';
+      this.pass = '';
+      this.authUser = user.user;
+      this.db.updateUserData(user.user);
+      })
+      .catch( e => {
+        alert('Usuario ya registrado');
+      });
   }
 
   logout() {

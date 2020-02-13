@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { UsersComponent } from './users/users.component';
 import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { RegisterComponent } from './register/register.component';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

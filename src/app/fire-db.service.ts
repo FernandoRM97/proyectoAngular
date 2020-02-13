@@ -29,4 +29,28 @@ export class FireDbService {
     return this.db.object(path).remove();
   }
 
+  getOutStandingPhones() {
+    const path = 'phones';
+    return this.db.list(path).snapshotChanges();
+  }
+
+  getIphones() {
+    const path = 'iphones';
+    return this.db.list(path).snapshotChanges();
+  }
+
+  getSamsungs() {
+    const path = 'samsungs';
+    return this.db.list(path).snapshotChanges();
+  }
+
+  getHuawei() {
+    const path = 'huaweis';
+    return this.db.list(path).snapshotChanges();
+  }
+
+  getLg() {
+    const path = 'lgs';
+    return this.db.list(path).snapshotChanges();
+  }
 }

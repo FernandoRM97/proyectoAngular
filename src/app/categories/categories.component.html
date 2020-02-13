@@ -1,5 +1,69 @@
-<p>categories works!</p>
+<br>
+<hr>
+<br>
 
-<div *ngFor="let phone of ">
+<h3>Iphone</h3>
+<br>
 
+<div class="bloque">
+    <div class="card" style="width: 14rem; margin: 2px;" *ngFor="let iphone of iphones">
+        <img class="card-img-top, telefono" src="{{ iphone.url }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ iphone.nombre }}</h5>
+            <a href="#" class="btn btn-danger">Más Información</a>
+        </div>
+    </div>
 </div>
+
+<br>
+<hr>
+<br>
+
+<h3>Samsung</h3>
+<br>
+
+<div class="bloque">
+    <div class="card" style="width: 14rem; margin: 2px;" *ngFor="let phone of moviles">
+        <img class="card-img-top, telefono" src="{{ phone.url }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ phone.nombre }}</h5>
+            <a href="#" class="btn btn-danger">Más Información</a>
+        </div>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+<h3>Huawei</h3>
+<br>
+
+<div class="bloque">
+    <div class="card" style="width: 14rem; margin: 2px;" *ngFor="let phone of huaweis">
+        <img class="card-img-top, telefono" src="{{ phone.url }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ phone.nombre }}</h5>
+            <a href="#" class="btn btn-danger">Más Información</a>
+        </div>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>
+<h3>LG</h3>
+<br>
+
+<div class="bloque">
+    <div class="card" style="width: 14rem; margin: 2px;" *ngFor="let phone of lgs">
+        <img class="card-img-top, telefono" src="{{ phone.url }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ phone.nombre }}</h5>
+            <a href="#" class="btn btn-danger">Más Información</a>
+        </div>
+    </div>
+</div>
+
+<br>
+<hr>
+<br>

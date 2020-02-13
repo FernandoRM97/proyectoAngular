@@ -28,7 +28,7 @@
             <input type="text" class="form-control" style="margin: 1px; width: 200px;" name="email" placeholder="Escribe tu email..." [(ngModel)]="auth.email" />
             <input type="password" class="form-control" style="margin: 1px; width: 200px;" name="pass" placeholder="Escribe tu contraseña..." [(ngModel)]="auth.pass" />
             <button class="right" (click)="auth.login()"><img height="auto" width="20px" src="./assets/logo.png" alt="Login"></button> <br/>
-            <button class="right" routerLink="register"><img class="img1" src="./assets/add_user.png" alt="Registrarse"></button>
+            <button class="right" (click)="auth.emailSignUp()"><img class="img1" src="./assets/add_user.png" alt="Registrarse"></button>
         </ng-template>
 
         <a class="nav-link right" routerLink="cart" routerLinkActive="active"><img height="auto" width="20px" src="./assets/cart.png"></a>
@@ -36,8 +36,11 @@
 </nav>
 
 <div class="container">
-    <router-outlet></router-outlet>
+    <router-outlet *ngIf="auth.user | async as user; else home"></router-outlet>
 
+    <ng-template #home>
+        <app-home></app-home>
+    </ng-template>
 </div>
 
 <!-- Site footer -->

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FireDbService } from '../fire-db.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  phones = [];
+
+  constructor(public db: FireDbService) { }
 
   ngOnInit() {
+
+    this.db.getOutStandingPhones().subscribe( snap => {
+      this.phones = [];
+      snap.forEach( u => {
+        const phones: any = u.payload.val();
+        this.phones.push(phones);
+      });
+    });
+
   }
 
 }

@@ -10,21 +10,9 @@
 <br>
 
 <div class="bloque">
-    <div>
-        <img src="assets/tel1.jpg" class="telefono">
-        <div class="texto">Iphone 11</div>
-    </div>
-    <div>
-        <img src="assets/tel2.jpg" class="telefono">
-        <div class="texto">LG k10</div>
-    </div>
-    <div>
-        <img src="assets/tel3.jpg" class="telefono">
-        <div class="texto">Samsung S10</div>
-    </div>
-    <div>
-        <img src="assets/tel4.jpg" class="telefono">
-        <div class="texto">Samsung S9</div>
+    <div *ngFor="let phone of phones">
+        <img src="{{ phone.url }}" class="telefono">
+        <div class="texto">{{ phone.nombre }}</div>
     </div>
 </div>
 
