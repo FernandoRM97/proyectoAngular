@@ -8,7 +8,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CartComponent } from './cart/cart.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -19,6 +18,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { UsersComponent } from './users/users.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PhoneComponent } from './phone/phone.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +27,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     CategoriesComponent,
     FooterComponent,
-    CartComponent,
     CarouselComponent,
     UsersComponent,
-    RegisterComponent
+    RegisterComponent,
+    PhoneComponent
   ],
   imports: [
     BrowserModule,

@@ -6,11 +6,11 @@
 <br>
 
 <div class="bloque">
-    <div class="card" style="width: 14rem; margin: 2px;" *ngFor="let iphone of iphones">
-        <img class="card-img-top, telefono" src="{{ iphone.url }}" alt="Card image cap">
+    <div class="card" style="width: 14rem; margin: 2px;" *ngFor="let phone of iphones">
+        <img class="card-img-top, telefono" src="{{ phone.url }}" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">{{ iphone.nombre }}</h5>
-            <a href="home" class="btn btn-danger">Más Información</a>
+            <h5 class="card-title">{{ phone.nombre }}</h5>
+            <button [routerLink]="['/', 'phone', phone.id+'I']" class="btn btn-danger">Más Información</button>
         </div>
     </div>
 </div>
@@ -27,7 +27,7 @@
         <img class="card-img-top, telefono" src="{{ phone.url }}" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{ phone.nombre }}</h5>
-            <a href="home" class="btn btn-danger">Más Información</a>
+            <button [routerLink]="['/', 'phone', phone.id+'S']" class="btn btn-danger">Más Información</button>
         </div>
     </div>
 </div>
@@ -43,7 +43,7 @@
         <img class="card-img-top, telefono" src="{{ phone.url }}" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{ phone.nombre }}</h5>
-            <a href="home" class="btn btn-danger">Más Información</a>
+            <button [routerLink]="['/', 'phone', phone.id+'H']" class="btn btn-danger">Más Información</button>
         </div>
     </div>
 </div>
@@ -59,7 +59,7 @@
         <img class="card-img-top, telefono" src="{{ phone.url }}" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{ phone.nombre }}</h5>
-            <a href="home" class="btn btn-danger">Más Información</a>
+            <button [routerLink]="['/', 'phone', phone.id+'L']" class="btn btn-danger">Más Información</button>
         </div>
     </div>
 </div>

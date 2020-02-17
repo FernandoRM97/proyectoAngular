@@ -20,7 +20,6 @@ export class FireDbService {
 
   getUsers() {
     const path = 'users/';
-    // return this.db.list(path).valueChanges();
     return this.db.list(path).snapshotChanges();
   }
 
@@ -53,4 +52,25 @@ export class FireDbService {
     const path = 'lgs';
     return this.db.list(path).snapshotChanges();
   }
+
+  getPhoneIphone(id) {
+    const path = 'iphones/' + id;
+    return this.db.list(path).snapshotChanges();
+  }
+
+  getPhoneSamsung(id) {
+    const path = 'samsungs/' + id;
+    return this.db.list(path).snapshotChanges();
+  }
+
+  getPhoneLg(id) {
+    const path = 'lgs/' + id;
+    return this.db.list(path).snapshotChanges();
+  }
+
+  getPhoneHuawei(id) {
+    const path = 'huaweis/' + id;
+    return this.db.list(path).snapshotChanges();
+  }
+
 }
